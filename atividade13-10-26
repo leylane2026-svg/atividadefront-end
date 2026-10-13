@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividade 1 - Grid Básico</title>
+<style>
+/* Estilos gerais da página */
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f7f6;
+margin: 0;
+padding: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+​h1 {
+color: #006666;
+margin-bottom: 25px;
+}
+​/* 1. Container com display: grid */
+.grid-container {
+display: grid;
+​/* 2. Três colunas iguais usando repeat */
+grid-template-columns: repeat(3, 1fr);
+​/* 4. Aplicação de gap para espaçamento */
+gap: 16px;
+​width: 100%;
+max-width: 600px;
+}
+​/* Estilização dos 6 blocos */
+.bloco {
+background-color: #008080;
+color: #ffffff;
+padding: 30px;
+text-align: center;
+font-weight: bold;
+font-size: 1.1rem;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body>
+​<h1>Atividade 1 – Grid Básico</h1>
+​<!-- Container principal do Grid -->
+<div class="grid-container">
+<!-- 3. Adição dos 6 blocos dentro do container -->
+<div class="bloco">Bloco 1</div>
+<div class="bloco">Bloco 2</div>
+<div class="bloco">Bloco 3</div>
+<div class="bloco">Bloco 4</div>
+<div class="bloco">Bloco 5</div>
+<div class="bloco">Bloco 6</div>
+</div>
+​</body>
+</html>
