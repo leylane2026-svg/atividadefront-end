@@ -1,0 +1,33 @@
+# Desafio 1 - Calculadora de Média
+# Conteúdo: Operadores algébricos e estruturas condicionais (if / elif / else)
+
+def calcular_media():
+    print("=== Calculadora de Média ===")
+    
+    try:
+        # Recebe 3 notas do usuário
+        nota1 = float(input("Digite a primeira nota: "))
+        nota2 = float(input("Digite a segunda nota: "))
+        nota3 = float(input("Digite a terceira nota: "))
+
+        # Calcula a média aritmética utilizando + e /
+        media = (nota1 + nota2 + nota3) / 3
+
+        # Exibe a média formatada com duas casas decimais
+        print(f"\nMédia das notas: {media:.2f}")
+
+        # Determina a situação usando estrutura condicional (if / elif / else)
+        if media >= 7:
+            situacao = "Aprovado"
+        elif 5 <= media < 7:
+            situacao = "Recuperação"
+        else:
+            situacao = "Reprovado"
+
+        print(f"Situação: {situacao}")
+
+    except ValueError:
+        print("Erro: Digite apenas números válidos para as notas.")
+
+if _name_ == "_main_":
+    calcular_media()
