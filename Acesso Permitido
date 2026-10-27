@@ -1,0 +1,21 @@
+# Desafio 2 - Acesso Permitido
+# Conteúdo: Operadores lógicos (and / or / not)
+
+def verificar_acesso():
+    print("=== Desafio 2: Acesso Permitido ===")
+    
+    # Simulando os checkboxes através de entradas de sim/não (s/n)
+    tem_login_input = input("Possui login? (s/n): ").strip().lower()
+    tem_senha_input = input("Possui senha? (s/n): ").strip().lower()
+
+    tem_login = tem_login_input == 's'
+    tem_senha = tem_senha_input == 's'
+
+    # Usando operador lógico 'and' (equivalente a && do JavaScript)
+    if tem_login and tem_senha:
+        print("\n[ACESSO LIBERADO] - Acesso permitido!")
+    else:
+        print("\n[ACESSO NEGADO] - Credenciais incompletas.")
+
+if _name_ == "_main_":
+    verificar_acesso()
