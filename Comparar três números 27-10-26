@@ -1,0 +1,42 @@
+# Desafio 3 - Comparar Três Números
+# Conteúdo: Operadores relacionais e múltiplos if
+
+def comparar_numeros():
+    print("=== Desafio 3: Comparar Três Números ===")
+    
+    try:
+        # O usuário digita 3 números
+        n1 = float(input("Digite o primeiro número: "))
+        n2 = float(input("Digite o segundo número: "))
+        n3 = float(input("Digite o terceiro número: "))
+
+        # Encontrando o maior número
+        maior = n1
+        if n2 > maior:
+            maior = n2
+        if n3 > maior:
+            maior = n3
+
+        # Encontrando o menor número
+        menor = n1
+        if n2 < menor:
+            menor = n2
+        if n3 < menor:
+            menor = n3
+
+        # Verificando se há números iguais usando == e or
+        if n1 == n2 or n1 == n3 or n2 == n3:
+            iguais_msg = "Sim, há números iguais."
+        else:
+            iguais_msg = "Não, todos os números são diferentes."
+
+        # Exibição dos resultados
+        print(f"\nMaior número: {maior}")
+        print(f"Menor número: {menor}")
+        print(f"Igualdade: {iguais_msg}")
+
+    except ValueError:
+        print("Erro: Por favor, digite apenas valores numéricos válidos.")
+
+if _name_ == "_main_":
+    comparar_numeros()
